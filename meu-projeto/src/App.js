@@ -1,16 +1,16 @@
+import { useState } from 'react';
+import SeuNome from './SeuNome';
+import Saudacao from './Saudacao';
 import './App.css';
-import OutraLista from './OutraLista';
-
 function App() {
-
-    //o react irá reclamar caso não tenha uma key para cada item da lista
-const meusItens = ['React', 'Vue', 'Angular', 'Svelte', 'Ember'];
+    const [nome, setNome] = useState();
 
     return (
         // Chama "class" como "className" em react
         <div className="App">
-            <h1>Renderização de lista</h1>
-            <OutraLista itens={meusItens}/>
+            <h1>State Lift</h1>
+            <SeuNome setNome={setNome}/>
+            <Saudacao nome={nome}/>
         </div>
 
     );
