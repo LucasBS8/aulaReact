@@ -1,5 +1,4 @@
 function Button(props) {
-    return <button>{props.text}</button>
-    
+    return <button onClick={props.event}>{props.text}</button>
 }
 export default Button;
