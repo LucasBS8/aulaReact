@@ -1,18 +1,28 @@
-import { useState } from 'react';
-import SeuNome from './SeuNome';
-import Saudacao from './Saudacao';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './components/pages/Home';
+import Empresa from './components/pages/Empresa';
+import Contato from './components/pages/Contato';
+import NavBar from './components/layout/NavBar';
+import Footer from './components/layout/Footer';
 import './App.css';
 function App() {
-    const [nome, setNome] = useState();
-
     return (
-        // Chama "class" como "className" em react
-        <div className="App">
-            <h1>State Lift</h1>
-            <SeuNome setNome={setNome}/>
-            <Saudacao nome={nome}/>
-        </div>
+        <Router>
+            <NavBar />
 
+            <Switch>
+                <Route exact path='/'>
+                    <Home />
+                </Route>
+                <Route path='/empresa'>
+                    <Empresa />
+                </Route>
+                <Route path='/contato'>
+                    <Contato />
+                </Route>
+            </Switch>
+            <Footer />
+        </Router>
     );
 }
 
