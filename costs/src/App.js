@@ -14,21 +14,21 @@ import NavBar from './components/layout/NavBar';
 function App() {
   return (
 
-      <BrowserRouter>
-<NavBar/>
+    <BrowserRouter>
+      <NavBar />
       <Container customClass="minheight">
-          <Routes>
-            <Route path="/" element={<Home />} />
+        <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/Projects" element={<Projects />} />
-            <Route path="/Company" element={<Company />} />
-            <Route path="/Contact" element={<Contact />} />
-            <Route path="/NewProject" element={<NewProject />} />
-          </Routes>
-        </Container>
+          <Route path="/Company" element={<Company />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/NewProject" element={<NewProject />} />
+        </Routes>
+      </Container>
 
-        <Footer/>
+      <Footer />
 
-      </BrowserRouter>
+    </BrowserRouter>
   );
 }
 
